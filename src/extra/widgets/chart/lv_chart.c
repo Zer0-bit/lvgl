@@ -990,8 +990,8 @@ static void draw_series_line(lv_obj_t * obj, lv_draw_ctx_t * draw_ctx)
 
                                 // Set the dash gap and dash width
                                 draw_dashed_line.dash_gap = lv_dpx(10);
-                                draw_dashed_line.dash_width = lv_dpx(10);
-                                draw_dashed_line.width = lv_dpx(3);
+                                draw_dashed_line.dash_width = lv_dpx(4);
+                                draw_dashed_line.width = lv_dpx(2);
 
                                 // Set the color
                                 draw_dashed_line.color = ser->color;
@@ -1045,8 +1045,8 @@ static void draw_series_line(lv_obj_t * obj, lv_draw_ctx_t * draw_ctx)
 
                             // Set the dash gap and dash width
                             draw_dashed_line.dash_gap = lv_dpx(10);
-                            draw_dashed_line.dash_width = lv_dpx(10);
-                            draw_dashed_line.width = lv_dpx(3);
+                            draw_dashed_line.dash_width = lv_dpx(4);
+                            draw_dashed_line.width = lv_dpx(2);
 
                             // Set the color
                             draw_dashed_line.color = ser->color;
