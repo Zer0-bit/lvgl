@@ -1,5 +1,86 @@
 # Changelog
 
+## [v8.3.11](https://github.com/lvgl/lvgl/compare/v8.3.11...v8.3.10) 6 December 2023
+
+### New Features
+
+- feat(table): add user_data to table cells [`4767`](https://github.com/lvgl/lvgl/pull/4767)
+- feat(tiny_ttf): backport Tiny TTF to lvgl 8 [`4727`](https://github.com/lvgl/lvgl/pull/4727)
+- feat(littlefs): add lv_fs_littlefs system as a driver [`4677`](https://github.com/lvgl/lvgl/pull/4677)
+
+### Fixes
+
+- fix(obj): readjust scroll after layout when child removed [`4921`](https://github.com/lvgl/lvgl/pull/4921)
+- fix(rt-thread): fix create lvgl thread problem [`4862`](https://github.com/lvgl/lvgl/pull/4862)
+- fix(obj): fix arduino compile warnings [`4807`](https://github.com/lvgl/lvgl/pull/4807)
+- fix(table):fix issue with abnormal string output of 'lv_table_set_cell_value_fmt' [`4804`](https://github.com/lvgl/lvgl/pull/4804)
+- fix(table) user data API functions renamed [`4769`](https://github.com/lvgl/lvgl/pull/4769)
+- fix(ime_pinyin): keep cursor in the textarea when a candidate is pressed [`4731`](https://github.com/lvgl/lvgl/pull/4731)
+- fix(draw_needles): changed needle line draw start point from scale ce… [`4682`](https://github.com/lvgl/lvgl/pull/4682)
+- fix(arc): handle click outside background angle range (#4586) [`4667`](https://github.com/lvgl/lvgl/pull/4667)
+- fix(meter):  fix minor issues [`4657`](https://github.com/lvgl/lvgl/pull/4657)
+- fix(draw): fix compiler error in lv_draw_sw_transform.c #2 [`4612`](https://github.com/lvgl/lvgl/pull/4612)
+- fix(dropdown): avoid partial match in lv_dropdown_get_option_index [`4598`](https://github.com/lvgl/lvgl/pull/4598)
+- fix(dropdown): reset char_i = 0, avoid access overflow [`4589`](https://github.com/lvgl/lvgl/pull/4589)
+- fix(btnmatrix): set LV_BTNMATRIX_BTN_NONE when clicking of disabled button (#4571) [`4578`](https://github.com/lvgl/lvgl/pull/4578)
+- fix(qrcode): use LV_ASSERT instead of assert [`1840dec`](https://github.com/lvgl/lvgl/commit/1840decb4136ba01552fcb7cedb0ff759824e2fd)
+- fix: fix warning in lv_draw_sw_letter.c [`d22cda3`](https://github.com/lvgl/lvgl/commit/d22cda3cdb15cee95763491db95753980846d9f9)
+- fix(arc): fix setting value by click [`20b6199`](https://github.com/lvgl/lvgl/commit/20b6199ba90319942c3cd91f2c727da6cd40cd2d)
+- fix(disp): fix infinite recursive SCREEN_LOADED events [`ef76206`](https://github.com/lvgl/lvgl/commit/ef76206c75ea9de26407534a9ce1079dc8e750e3)
+- fix(keyboard): add '&' character [`d20bd1c`](https://github.com/lvgl/lvgl/commit/d20bd1ca397ff954167dd496cf1a78da8814f602)
+- fix(draw): fix scaling rectangle parts with opa [`7a8fcbf`](https://github.com/lvgl/lvgl/commit/7a8fcbfd3458739cbe64b29767a969ece9542039)
+
+### Docs
+
+- docs(obj): fix wording [`4625`](https://github.com/lvgl/lvgl/pull/4625)
+- docs(label): update text for recoloring [`4606`](https://github.com/lvgl/lvgl/pull/4606)
+- docs: fix typo [`9fbac75`](https://github.com/lvgl/lvgl/commit/9fbac7570bdec18ddbb157b59f5e26a2ebdf5daf)
+
+### Others
+
+- chore(cmsis-pack): prepare for v8.3.11 [`4936`](https://github.com/lvgl/lvgl/pull/4936)
+- chore(cmake): add support for user-specified lv_conf.h path [`4689`](https://github.com/lvgl/lvgl/pull/4689)
+- STM32U5 DMA2D support (8.3) [`4643`](https://github.com/lvgl/lvgl/pull/4643)
+- backport: fix(lv_disp): fix lv_scr_load_anim being called twice quickly [`4629`](https://github.com/lvgl/lvgl/pull/4629)
+- chore(lv_draw_sw_letter.c): Fix print format [`4615`](https://github.com/lvgl/lvgl/pull/4615)
+- chore: fix compile error [`7568df7`](https://github.com/lvgl/lvgl/commit/7568df77d16ecbf2242b2bc290dc8fc0eb29cf5a)
+
+## [v8.3.10](https://github.com/lvgl/lvgl/compare/v8.3.10...v8.3.9) 20 September 2023
+
+### New Features
+
+- feat(disp): add double buffered direct-mode efficient sync algorithm (v8.3) [`4497`](https://github.com/lvgl/lvgl/pull/4497)
+- feat(style): backport opa_layered [`6548ea0`](https://github.com/lvgl/lvgl/commit/6548ea0f291be8a97afb3c4d7dcabbe465ae5a04)
+
+
+### Fixes
+
+- fix: build on Windows (MinGW environment) [`4538`](https://github.com/lvgl/lvgl/pull/4538)
+- fix(docs): dropdown: fix function name in description of static options [`4535`](https://github.com/lvgl/lvgl/pull/4535)
+- fix: do not copy invalid areas if not double buffered mode [`4526`](https://github.com/lvgl/lvgl/pull/4526)
+- fix(sdl): add missing parameter in lv_draw_sdl_composite_texture_obtain [`4490`](https://github.com/lvgl/lvgl/pull/4490)
+- fix(dropdown): position to the selected item in lv_dropdown_set_selected [`f174589`](https://github.com/lvgl/lvgl/commit/f174589240b099a349e54ba09aa9b39c2b347341)
+- fix(vglite): be sure end_angle > start_angle in arc drawing [`01cd1fe`](https://github.com/lvgl/lvgl/commit/01cd1fed9db974aa616a6289a29171b7a971cd89)
+- fix(btnmatrix): fix tapping just outside a button in a buttonmatrix [`8063fac`](https://github.com/lvgl/lvgl/commit/8063fac793b0a09add1e57c1115b734659274e6f)
+
+
+### Docs
+
+- docs(calendar): update according to v8.2 changes [`a296456`](https://github.com/lvgl/lvgl/commit/a296456591f6ff0e3b3ae6cdcdd9ec5b1711c357)
+- docs(simulator): remove SDL support from the Visual Studio project [`bcebafe`](https://github.com/lvgl/lvgl/commit/bcebafe4fb72e336b7dedca89c07e334427eef8d)
+
+### CI and tests
+
+- ci: update screenshot compare from v9 to automatically create missing reference images [`fd21ed0`](https://github.com/lvgl/lvgl/commit/fd21ed0eb82bacb1e482180ab0aaed6a667f000d)
+- ci(dropdown): fix test [`5fc488a`](https://github.com/lvgl/lvgl/commit/5fc488a088639dbfb5eb44f65b05e13b6ba881bf)
+
+### Others
+
+- chore(cmsis-pack): create cmsis-pack for v8.3.10 [`4572`](https://github.com/lvgl/lvgl/pull/4572)
+- Update screen object opacity function documentation [`4505`](https://github.com/lvgl/lvgl/pull/4505)
+- demo(sress): fix issues when the stress test is opened/clsoed multiple times [`1c5df6c`](https://github.com/lvgl/lvgl/commit/1c5df6c665b0d5f6f346d45b13109ff1f6ea78a6)
+- chore: code formatting [`eb87767`](https://github.com/lvgl/lvgl/commit/eb87767cc65fec93f9cc4f87a1f8fb5b32f7e41d)
+
 
 ## [v8.3.9](https://github.com/lvgl/lvgl/compare/v8.3.9...v8.3.8) 6 August 2023
 
